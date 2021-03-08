@@ -41,6 +41,20 @@ const sq = {
         if (document.getElementById(id).classList.contains(className)) {
           callback()
         }
+    },
+
+
+
+    value: (id, newValue) => {
+
+        // Função vai retornar o valor de um elemento html
+        // E caso o newValue seja utilizado, o elemento html vai receber o novo valor
+
+        if (newValue != null){
+            return document.getElementById(id).value = newValue
+        }
+
+        return document.getElementById(id).value
     }
 }
 
