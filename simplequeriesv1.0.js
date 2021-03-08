@@ -1,4 +1,4 @@
-// simpleQueries
+// simpleQueries v1.0
 
 const sq = {
     click: (id, callback) => {
