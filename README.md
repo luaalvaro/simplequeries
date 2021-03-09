@@ -22,6 +22,17 @@ sq.click('btnLogin', () => {
 
     alert('Você clicou no botão')
 })
+
+sq.addClass('btnRegister', ['mt-2', 'bg-red-500', 'font-bold'])
+
+sq.contains('btnLogin', 'h-2') //Irá verificar se o btn login tem a class h-2 e retornará true or false
+
+sq.contains('btnLogin', 'h-2', () => {
+    //Passando um callback, caso a validação for verdadeira
+    //O callback é executado
+
+    alert('class h-2 está contida em btnLogin')
+}) 
 ```
 
 - sq.click(id, callback): Esta função irá buscar o elemento html com o ID informado, e irá adicionar um 'addEventListener' já com o event.preventDefault() e executar a função de callback quando o elemento HTML for clicado

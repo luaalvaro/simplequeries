@@ -12,23 +12,39 @@ module.exports = sq = {
             callback()
         })
     },
-    addClass: (id, className) => {
+    addClass: (id, classesNameArray) => {
 
-        // Função vai pegar o elemento HTML e adicionar uma classe na lista de classes
+        // Função vai pegar o elemento HTML e adicionar uma ou mais de uma classe na lista de classes
     
-        return document.getElementById(id).classList.add(className)
+        function exec() {
+            for(count = 0; count < classesNameArray.length; count++){
+                document.getElementById(id).classList.add(classesNameArray[count])
+            }
+        }
+
+        return exec()
     },
-    removeClass: (id, className) => {
+    removeClass: (id, classesNameArray) => {
 
         // Função vai pegar o elemento HTL e remover uma classe da lista de classes
     
-        return document.getElementById(id).classList.remove(className)
+        function exec() {
+            for(count = 0; count < classesNameArray.length; count++){
+                document.getElementById(id).classList.remove(classesNameArray[count])
+            }
+        }
+
+        return exec()
     },
     contains: (id, className, callback) => {
 
         // Função vai verificar se o elemento HTML tem determinada classe (parametro)
         // na lista de classes, se tiver vai executar a função de callback
-    
+        
+        if (callback == undefined) {
+            return document.getElementById(id).classList.contains(className)
+        }
+
         if (document.getElementById(id).classList.contains(className)) {
           callback()
         }
