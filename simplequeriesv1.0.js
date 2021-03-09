@@ -1,6 +1,6 @@
 // simpleQueries v1.0
 
-const sq = {
+export const sq = {
     click: (id, callback) => {
 
         // Função vai pegar o elemento HTML pela ID e vai adidionar um EventListener
@@ -58,4 +58,3 @@ const sq = {
     }
 }
 
-module.exports = sq
