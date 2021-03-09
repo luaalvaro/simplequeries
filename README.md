@@ -6,10 +6,22 @@
 
 **Como utilizar o SimpleQueries**
 
-Para utilizar o simplequeries é bastante simples, já que estamos falando de uma biblioteca javascript. Basta linkar o arquivo min ao seu projeto e tudo estará funcionando perfeitamente
+ **Via npm**
 
-```html
+```shell
+npm install simplequeries
+```
 
+Para fazer a chamada no seu projeto basta fazer o import
+```js
+import sq from 'simplequeries'
+
+sq.click('btnLogin', () => {
+    // Esta função de callback será executada quando o botão com id
+    // btnLogin for clicado
+
+    alert('Você clicou no botão')
+})
 ```
 
 - sq.click(id, callback): Esta função irá buscar o elemento html com o ID informado, e irá adicionar um 'addEventListener' já com o event.preventDefault() e executar a função de callback quando o elemento HTML for clicado

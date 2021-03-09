@@ -1,6 +1,6 @@
 // simpleQueries v1.0
 
-export const sq = {
+module.exports = sq = {
     click: (id, callback) => {
 
         // Função vai pegar o elemento HTML pela ID e vai adidionar um EventListener
@@ -12,27 +12,18 @@ export const sq = {
             callback()
         })
     },
-
-
-
     addClass: (id, className) => {
 
         // Função vai pegar o elemento HTML e adicionar uma classe na lista de classes
     
         return document.getElementById(id).classList.add(className)
     },
-
-
-
-    RemoveClass: (id, className) => {
+    removeClass: (id, className) => {
 
         // Função vai pegar o elemento HTL e remover uma classe da lista de classes
     
         return document.getElementById(id).classList.remove(className)
     },
-
-
-
     contains: (id, className, callback) => {
 
         // Função vai verificar se o elemento HTML tem determinada classe (parametro)
@@ -42,9 +33,6 @@ export const sq = {
           callback()
         }
     },
-
-
-
     value: (id, newValue) => {
 
         // Função vai retornar o valor de um elemento html
@@ -57,4 +45,3 @@ export const sq = {
         return document.getElementById(id).value
     }
 }
-

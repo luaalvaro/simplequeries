@@ -1,6 +1,6 @@
 {
   "name": "simplequeries",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SimpleQueries é um pacote que vai trazer a abstração de algumas queries que são bastante utilizada para manipulação de elementos HTML",
   "main": "index.js",
   "scripts": {
